@@ -1,5 +1,13 @@
 require 'rspec'
 
+def swap(array, i, j)
+
+  temp = array[i]
+  array[i] = array[j]
+  array[j] = temp
+
+end
+
 def contains_duplicates?(array)
 
   min = 1
@@ -15,9 +23,7 @@ def contains_duplicates?(array)
         return true
       end
 
-      array[i] = array[j]
-      array[j] = temp
-      temp = array[i]
+     swap(array, i, j)
 
       j = temp - min
 
