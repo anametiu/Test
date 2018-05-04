@@ -2,7 +2,7 @@ require 'rspec'
 
 def contains_duplicates?(array)
 
-  min = 0
+  min = 1
 
   array.each_index do |i|
 
