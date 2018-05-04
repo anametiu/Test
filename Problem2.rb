@@ -6,17 +6,14 @@ def find_max_numbers(array)
   second = 0
 
   array.each do |x|
+
     if x > first
+      second = first
       first = x
-    end
-  end
-
-  array.delete(first)
-
-  array.each do |x|
-    if x > second
+    elsif x > second
       second = x
     end
+
   end
 
   return Array.new([first, second])
