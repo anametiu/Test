@@ -11,6 +11,8 @@ def find_max_numbers(array)
     end
   end
 
+  array.delete(first)
+
   array.each do |x|
     if x > second
       second = x
