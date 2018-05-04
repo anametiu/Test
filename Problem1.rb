@@ -1,9 +1,7 @@
-require 'rspec'
-
 def  sum_even_numbers(array)
 
   sum = 0
-  array.each { |x| sum += x % 2 == 0 ? x : 0 }
+  array.each { |x| sum += x.even? ? x : 0 }
   return sum
 
 end
