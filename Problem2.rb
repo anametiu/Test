@@ -1,32 +1,17 @@
-require 'rspec'
+class Problem2
 
-def find_max_numbers(array)
-
-  first = 0
-  second = 0
-
-  array.each do |x|
-
-    if x > first
-      second = first
-      first = x
-    elsif x > second
-      second = x
+  def find_max_numbers(array)
+    first = -1.0/0.0
+    second = -1.0/0.0
+    array.each do |x|
+      if x > first
+        second = first
+        first = x
+      elsif x > second
+        second = x
+      end
     end
-
+    Array.new([first, second])
   end
 
-  return Array.new([first, second])
-
-end
-
-describe 'Problem2' do
-
-  it 'should find max numbers' do
-
-    puts expect(find_max_numbers([4, 8, 2, 6, 9, 3])).to eq([9, 8])
-    puts expect(find_max_numbers([1, 2, 3, 4, 5, 6])).to eq([6, 5])
-    puts expect(find_max_numbers([3, 2, 7, 1, 1, 1])).to eq([7, 3])
-
-  end
 end
